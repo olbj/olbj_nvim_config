@@ -7,14 +7,14 @@ opt.number = true -- shows absolute line number on cursor line (when relative nu
 -- tabs & indentation
 opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
 opt.shiftwidth = 2 -- 2 spaces for indent width
-opt.expandtab = true -- expand tab to spaces
+opt.expandtab = false -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 
 -- syntax enabled
 opt.syntax = "enable" -- enable syntax setting
 
 -- line wrapping
-opt.wrap = false -- disable line wrapping
+opt.wrap = true -- disable line wrapping
 
 -- search settings
 opt.ignorecase = true -- ignore case when searching
