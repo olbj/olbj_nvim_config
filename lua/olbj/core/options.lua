@@ -7,14 +7,11 @@ opt.number = true -- shows absolute line number on cursor line (when relative nu
 -- tabs & indentation
 opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
 opt.shiftwidth = 2 -- 2 spaces for indent width
-opt.expandtab = false -- expand tab to spaces
+opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 
--- syntax enabled
-opt.syntax = "enable" -- enable syntax setting
-
 -- line wrapping
-opt.wrap = true -- disable line wrapping
+opt.wrap = false -- disable line wrapping
 
 -- search settings
 opt.ignorecase = true -- ignore case when searching
@@ -35,14 +32,11 @@ opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
 
 -- clipboard
--- opt.clipboard:append("unnamedplus") -- use system clipboard as default register
+opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 
 -- split windows
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
-opt.iskeyword:append("-") -- consider string-string as whole word
-
--- Vimtex options
-vim.g.vimtex_view_method = 'skim'
-vim.g.vimtex_compiler_method = 'latexmk'
+-- turn off swapfile
+opt.swapfile = false
