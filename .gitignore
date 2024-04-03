@@ -1,0 +1,11 @@
+# Ignore all files
+*
+
+# Unignore Lua files
+!*.lua
+!lua/
+
+# Unignore readme
+!readme.*
+!README.*
+!.gitignore
