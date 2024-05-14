@@ -5,15 +5,6 @@ local default_plugins = {
   "nvim-lua/plenary.nvim",
 
   {
-   "lervag/vimtex",
-   init = function()
-    vim.g.vimtex_view_method = "skim"
-    vim.g.vimtex_compiler_method = "latexmk"
-   end,
-   lazy = false,
-  },
-
-  {
     "NvChad/base46",
     branch = "v2.0",
     build = function()
@@ -28,7 +19,7 @@ local default_plugins = {
   },
 
   {
-    "NvChad/nvterm",
+    "zbirenbaum/nvterm",
     init = function()
       require("core.utils").load_mappings "nvterm"
     end,
@@ -79,7 +70,6 @@ local default_plugins = {
   {
     "nvim-treesitter/nvim-treesitter",
     event = { "BufReadPost", "BufNewFile" },
-    tag = "v0.9.2",
     cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
     build = ":TSUpdate",
     opts = function()
@@ -250,6 +240,17 @@ local default_plugins = {
       dofile(vim.g.base46_cache .. "whichkey")
       require("which-key").setup(opts)
     end,
+  },
+  {
+   "lervag/vimtex",
+   init = function()
+    vim.g.vimtex_view_method = "skim"
+    vim.g.vimtex_compiler_method = "latexmk"
+   end,
+   lazy = false,
+  },
+  {"github/copilot.vim",
+   lazy = false,
   },
 }
 

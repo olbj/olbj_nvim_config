@@ -1,9 +1,13 @@
 # Ignore all files
 *
+.DS_Store
 
 # Unignore Lua files
 !*.lua
 !lua/
+!lua/*.lua
+!lua/*/*.lua
+!lua/*/*/*.lua
 
 # Unignore readme
 !readme.*
