@@ -15,5 +15,12 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
+-- Force-disable clipboard usage after Lazy.nvim has been loaded
+vim.defer_fn(function()
+  vim.opt.clipboard = "" -- Disable clipboard usage
+  print "Clipboard has been disabled." -- Debug message to confirm execution
+end, 0)
+
+-- Load Lazy.nvim plugins
 require "lazy_setup"
 require "polish"
